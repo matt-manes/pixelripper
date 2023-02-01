@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pixelripper"
+description = "Package and CLI for downloading media from a webpage."
+version = "0.0.0"
+requires-python = ">=3.10"
+dependencies = ["requests~=2.28.1", "printbuddies~=1.0.0", "seleniumuser~=1.0.0", "whosyouragent~=1.0.3", "scrapetools~=1.0.0", "pytest~=7.2.1", "bs4~=0.0.1"]
+readme = "README.md"
+keywords = ["webscraping"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    ]
+
+[[project.authors]]
+name = "Matt Manes"
+email = "mattmanes@pm.me"
+
+[project.urls]
+"Homepage" = "https://github.com/matt-manes/pixelripper"
+"Documentation" = "https://github.com/matt-manes/pixelripper/tree/main/docs"
+"Source code" = "https://github.com/matt-manes/pixelripper/tree/main/src/pixelripper"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+    ]
+pythonpath = "src"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    ".coverage",
+    ".pytest_cache",
+    ".vscode",
+    "tests",
+    ".gitignore"
+    ]
+[project.scripts]
+pixelripper = "pixelripper.pixelripper:main"
