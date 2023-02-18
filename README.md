@@ -1,11 +1,11 @@
-# pixelripper
+# Pixelripper
 Package and CLI for downloading media from a webpage. <br>
 Install with:<br>
 <pre>
 pip install pixelripper
 </pre>
 
-pixelripper contains a class called PixelRipper and a subclass called PixelRipperSelenium.<br>
+Pixelripper contains a class called PixelRipper and a subclass called PixelRipperSelenium.<br>
 PixelRipper uses the requests library to fetch webpages and PixelRipperSelenium uses a selenium based engine to do the same.<br>
 The selenium engine is slower and requires more resources, but is useful for webpages
 that don't render their media content without a JavaScript engine.<br>
@@ -14,7 +14,7 @@ Note: You must have the appropriate webdriver for your machine and browser
 version installed in order to use PixelRipperSelenium.<br>
 pixelripper can be used programmatically or from the command line.<br>
 <br>
-Programmatic usage:
+### Programmatic usage:
 <pre>
 from pixelripper import PixelRipper
 from pathlib import Path
@@ -40,7 +40,7 @@ ripper.download_all(Path.cwd()/"somewebsite")
 # will be created inside the "somewebsite" folder when using this function.
 
 </pre>
-Command line usage:
+### Command line usage:
 <pre>
 >pixelripper -h
 usage: pixelripper [-h] [-s] [-nh] [-b BROWSER] [-o OUTPUT_PATH] [-eh [EXTRA_HEADERS ...]] url
