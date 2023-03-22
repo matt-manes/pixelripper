@@ -5,11 +5,11 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import requests
+
 from printbuddies import ProgBar
+from scrapetools import LinkScraper
 from seleniumuser import User
 from whosyouragent import get_agent
-
-from scrapetools import LinkScraper
 
 root = Path(__file__).parent
 
